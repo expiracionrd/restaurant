@@ -4,22 +4,27 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-nav, nav a{
-    background-image: linear-gradient(80deg, #da6200 0%, #a13909 100%); 
+nav{
     padding: 1%;
     display: flex;
     justify-content: space-between;
     text-decoration: none;
+    background-image: linear-gradient(80deg, #da6200 0%, #a13909 100%); 
 }
 
-.title{
+nav a{
     text-decoration: none;
     color: white;
 }
 
+.title{
+    text-decoration: none;
+    color: white; 
+}
+
 .create{
     text-decoration: none;
-    
+
 }
 
 .container{
