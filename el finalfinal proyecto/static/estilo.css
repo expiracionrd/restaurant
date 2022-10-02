@@ -2,6 +2,12 @@
     margin: 0%;
     padding: 0%;
     font-family: Arial, Helvetica, sans-serif;
+
+}
+
+h3{
+    font-size: 1em;
+    display: grid;
 }
 
 nav{
@@ -9,12 +15,23 @@ nav{
     display: flex;
     justify-content: space-between;
     text-decoration: none;
-    background-image: linear-gradient(80deg, #da6200 0%, #a13909 100%); 
+    background-image: linear-gradient(80deg, #da6200 0%, #a13909 100%);
 }
 
 nav a{
     text-decoration: none;
     color: white;
+}
+
+nav.menu{ /*sección de los restaurantes*/
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-around; /* texto centro*/
+
+    width: 200px; /*ajusta el tamaño del borde para name restaurant*/
+    height: 35px;
+    
+    background-image: linear-gradient(80deg, #da6200 100%, #a13909 0%);
 }
 
 .title{
@@ -24,22 +41,32 @@ nav a{
 
 .create{
     text-decoration: none;
+    font-size: 0.8em;
 
 }
 
 .container{
-    width: 160px;
-    height: 100px;
     display: inline-block;
-    margin: 1%;
-    background-color: rgb(218, 218, 218);
+    max-width: 350px;   
+    text-align: center;
+
+    margin: 2%;
+    border-radius: 6px;
 }
 
-.botones, .botones a{
+.restaurantes{
     position: relative;
-    bottom: -40%;
-    display: flex;
-    flex-direction: row, dir="rtl";
+
+    margin: 1%;
+    
+}
+
+.restaurantes a{
+    text-decoration: none;
+}
+
+.botones a{
+    float: right;
     text-decoration: none;
     
 }
