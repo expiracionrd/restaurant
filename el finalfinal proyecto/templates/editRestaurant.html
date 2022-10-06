@@ -1,28 +1,36 @@
-<html>
-
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<link rel=stylesheet type=text/css href="{{ url_for('static', filename='estilo.css') }}">
-	</head>
-
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='edit.css') }}">
+	<title>Document</title>
+</head>
 <body>
+	<div class="container">
+		<div class="titulo">
+			<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Warning.svg/832px-Warning.svg.png" alt="Advertencia" width="20px">
+			
+		</div>
+	
+	
+		<form action="{{url_for('editRestaurant',restaurant_id = restaurant.id)}}" method = 'post'>
+			<h1>Cambiar un restaurante</h1>
 
-<h1> Edit Restaurant </h1>
+			<label>Nuevo nombre:</label>
+			<input type ='text' size='30' name='name' placeholder = '{{restaurant.name }}'>
+		
+			
 
+			<div class="botones">
+				<input type='submit' value='Edit'>				
+				<a href='{{url_for('showRestaurants')}}'>Cancelar</a>
+			</div>
 
-<form action="{{ url_for('editRestaurant',restaurant_id = restaurant.id)}}" method = 'post'>
-
-
-	<p>Name:</p>
-		<input type ='text' size='30' name='name' placeholder = '{{restaurant.name }}'>
-
-
-<input type='submit' value='Edit'>
-
-
-<a href = '{{url_for('showRestaurants')}}'> Cancel </a>
-
-</form>
+				
+		</form>
+	</div>
+	
 </body>
-
 </html>

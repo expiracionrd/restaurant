@@ -12,7 +12,6 @@
     opacity: 85%;
 
 }
-
 h3{
     font-size: 1em;
     display: grid;
@@ -35,8 +34,8 @@ nav a{
 nav.menu{ /*sección de los restaurantes*/
     border-radius: 16px;
     display: flex;
-    justify-content: space-around; /* texto centro*/
-
+    justify-content: space-around; /* texto centro */
+    
     width: 260px; /*ajusta el tamaño del borde para name restaurant*/
     height: 35px;
     
