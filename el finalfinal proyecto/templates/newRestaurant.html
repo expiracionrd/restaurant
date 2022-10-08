@@ -1,22 +1,30 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="es">
 <head>
-<link rel=stylesheet type=text/css href="{{ url_for('static', filename='estilo.css') }}">
-	</head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='newrestaurant.css') }}">
+	<title>Crear nuevo restaurante</title>
+</head>
 <body>
+	
+	
+	<form action="#" method = 'post'>
+		<h1>Nuevo local de restaurante</h1>
+	
+		<p>Nombre:</p>
+			<input type ='text' size='30' name='name'>
+	
+	
+	<input type='submit' value='Crear'>
 
-<h1>New Restaurant</h1>
-
-<form action="#" method = 'post'>
-
-
-	<p>Name:</p>
-		<input type ='text' size='30' name='name'>
-
-
-<input type='submit' value='Create'>
-
-</form>
+	<p class="advisor">* El nombre del local o restaurante podrá ser editado o borrar, una vez se finalice este proecso.</p>
+	
+	</form>
 
 </body>
 </html>
+
+
+

@@ -1,32 +1,37 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<link rel=stylesheet type=text/css href="{{ url_for('static', filename='estilo.css') }}">
-	</head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='newmenuitem.css') }}">
+	<title>Nuevo plato en el menú</title>
+</head>
 <body>
-
-<h1>New Menu Item</h1>
-
-<form action="#" method = 'post'>
-
-
-	<p>Name:</p>
-		<input type ='text' size='30' name='name'>
-	<p>Description:</p>
-		<input type ='text' size='30' name='description'>
-	<p>Price:</p>
-		<input type ='text' size='30' name='price'>
-	<p>Course:</p>
-		<input type ='radio'  name='course' value ='Appetizer'>Appetizer</br>
-		<input type ='radio'  name='course' value ='Entree'>Entree</br>
-		<input type ='radio' name='course' value ='Dessert'>Dessert</br>
-		<input type ='radio'  name='course' value ='Beverage'>Beverage</br>
-	</br>
-
-
-<input type='submit' value='Create'>
-
-</form>
-
+	<form action="#" method = 'post'>
+		<h1>Nuevo platillo al menú</h1>
+	
+	
+		<p>Nombre:</p>
+			<input type ='text' size='30' name='name'>
+		<p>Descripción:</p>
+			<input type ='text' size='30' name='description'>
+		<p>Precio:</p>
+			<input type ='text' size='30' name='price'>
+		<p>Tipo:</p>
+		<label>Aperitivos</label>
+			<input class="botones-form" type ='radio' name='course' value ='Appetizer'>
+			<label>Entrada</label>
+			<input class="botones-form" type ='radio' name='course' value ='Entree'>
+			<label>Postres</label>
+			<input class="botones-form" type ='radio' name='course' value ='Dessert'>
+			<label>Bebidas</label>
+			<input class="botones-form" type ='radio' name='course' value ='Beverage'>
+		
+	
+	<input type='submit' value='Crear'>
+	
+	</form>
+	
 </body>
 </html>

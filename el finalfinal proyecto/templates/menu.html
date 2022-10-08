@@ -16,7 +16,7 @@
     {% if messages %}
           
     <ul>
-      {% for message in messages %}
+      {% for message in messages %}</ul>
 	    <li><b>{{ message }}</b></li>
         {% endfor %}
         </ul>
@@ -25,7 +25,7 @@
 
     {% if items !=[] %}
 
-	<a href = "{{url_for('newMenuItem', restaurant_id = restaurant.id )}}">Añadir un nuevo plato</a>
+	<a href="{{url_for('newMenuItem', restaurant_id = restaurant.id )}}">Añadir un nuevo plato</a>
 </nav>
 
 	<div class="container-items">
