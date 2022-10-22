@@ -132,7 +132,7 @@ def newMenuItem(restaurant_id):
     else:
         return render_template('newmenuitem.html', restaurant_id=restaurant_id)
 
-# Edit a menu item
+# Edita un item del menú
 
 
 @app.route('/restaurant/<int:restaurant_id>/menu/<int:menu_id>/edit',
@@ -145,13 +145,14 @@ def editMenuItem(restaurant_id, menu_id):
         if request.form['name']:
             editedItem.name = request.form['name']
         if request.form['description']:
-            editedItem.description = request.form['name']
+            editedItem.description = request.form['description']
         if request.form['price']:
             editedItem.price = request.form['price']
         if request.form['course']:
             editedItem.course = request.form['course']
         session.add(editedItem)
         session.commit()
+        print("funcionó")
         return redirect(url_for('showMenu', restaurant_id=restaurant_id))
     else:
 
@@ -176,6 +177,8 @@ def deleteMenuItem(restaurant_id, menu_id):
     else:
         return render_template('deleteMenuItem.html', item=itemToDelete)
     # return "This page is for deleting menu item %s" % menu_id
+
+
 
 
 if __name__ == '__main__':
