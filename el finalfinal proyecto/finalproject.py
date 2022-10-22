@@ -45,7 +45,6 @@ def showRestaurants():
     DBSession = sessionmaker(bind=engine)
     session = DBSession()
     restaurants = session.query(Restaurant).all()
-    # return "This page will show all my restaurants"
     return render_template('restaurants.html', restaurants=restaurants)
 
 
@@ -70,8 +69,7 @@ def newRestaurant():
 def editRestaurant(restaurant_id):
     DBSession = sessionmaker(bind=engine)
     session = DBSession()
-    editedRestaurant = session.query(
-        Restaurant).filter_by(id=restaurant_id).one()
+    editedRestaurant = session.query(Restaurant).filter_by(id=restaurant_id).one()
     if request.method == 'POST':
         if request.form['name']:
             editedRestaurant.name = request.form['name']
@@ -117,8 +115,7 @@ def showMenu(restaurant_id):
 # Create a new menu item
 
 
-@app.route(
-    '/restaurant/<int:restaurant_id>/menu/new/', methods=['GET', 'POST'])
+@app.route('/restaurant/<int:restaurant_id>/menu/new/', methods=['GET', 'POST'])
 def newMenuItem(restaurant_id):
     DBSession = sessionmaker(bind=engine)
     session = DBSession()
@@ -135,8 +132,7 @@ def newMenuItem(restaurant_id):
 # Edita un item del menú
 
 
-@app.route('/restaurant/<int:restaurant_id>/menu/<int:menu_id>/edit',
-           methods=['GET', 'POST'])
+@app.route('/restaurant/<int:restaurant_id>/menu/<int:menu_id>/edit', methods=['GET', 'POST'])
 def editMenuItem(restaurant_id, menu_id):
     DBSession = sessionmaker(bind=engine)
     session = DBSession()
@@ -164,8 +160,7 @@ def editMenuItem(restaurant_id, menu_id):
 # Delete a menu item
 
 
-@app.route('/restaurant/<int:restaurant_id>/menu/<int:menu_id>/delete',
-           methods=['GET', 'POST'])
+@app.route('/restaurant/<int:restaurant_id>/menu/<int:menu_id>/delete', methods=['GET', 'POST'])
 def deleteMenuItem(restaurant_id, menu_id):
     DBSession = sessionmaker(bind=engine)
     session = DBSession()
