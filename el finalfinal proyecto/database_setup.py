@@ -7,7 +7,6 @@ from sqlalchemy import create_engine
 
 Base = declarative_base()
 
-
 class Restaurant(Base):
     __tablename__ = 'restaurant'
 
@@ -47,6 +46,5 @@ class MenuItem(Base):
 
 
 engine = create_engine('sqlite:///restaurantmenu.db')
-
 
 Base.metadata.create_all(engine)
