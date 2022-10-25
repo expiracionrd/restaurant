@@ -25,13 +25,10 @@ nav a:hover{
 }
 
 .container-items{
-    display: flex;
-    justify-content: space-between;
-
-    margin: auto;
+    display: flex; 
     
     box-shadow: 0 0 5px rgb(144, 144, 144);
-    padding: 1rem 2rem;
+    padding: 1rem;
     
 }
 
@@ -40,8 +37,17 @@ nav a:hover{
     color: rgb(66, 66, 66);
 }
 
+h2{
+    text-transform: uppercase;
+    font-weight: lighter;
+    letter-spacing: 10;
+
+    text-align: center;
+}
+
 .aperitivos, .entrada, .postres, .bebidas{
     flex-direction: column;
+    margin: 0 5px;
     border-radius: 1%;
     border-color: red;
 }
