@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='login.css') }}">
+	<title>Cuentas, verificación</title>
+</head>
+<body>
+	<div class="container">
+		<div class="titulo">
+			<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Warning.svg/832px-Warning.svg.png" alt="Advertencia" width="20px">
+			
+		</div>
+	
+	
+		<form action="" method = 'post'>
+			<h1>Inicio de sesión</h1>
+
+			<label>Ingrese su nombre:</label>
+			<input type ='text' size='30' name='name' placeholder = 'Correo electrónico'>
+
+            <label>Ingrese su contraseña:</label>
+			<input type ='password' size='30' name='name' placeholder = 'Digite su clave'>
+
+			
+
+			<div class="botones">
+				<input type='submit' value='Acceder'>				
+				<a href='#'>Cancelar</a>
+			</div>
+
+				
+		</form>
+	</div>
+	
+</body>
+</html>
