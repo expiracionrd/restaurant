@@ -47,6 +47,10 @@ def showRestaurants():
     restaurants = session.query(Restaurant).all()
     return render_template('restaurants.html', restaurants=restaurants)
 
+@app.route('/login/')
+def showLogin():
+    return render_template('login.html' )
+
 
 # Crear nuevo restaurante / create a new restaurant
 @app.route('/restaurant/new/', methods=['GET', 'POST'])
